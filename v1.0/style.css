@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Autour One', cursive;
+}
+.container{
+	max-width: 800px;
+	margin: auto;
+	height: 100vh;
+	text-transform: capitalize;
+}
+body{
+	max-height : 100vh;
+	background: #e7eff760;
+
+}
+header{
+	padding: 2em 0 ;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+header a{
+	text-decoration: none;
+	color: #e63946;
+	font-weight: bolder;
+}
+header h1{
+	margin: .7em 0;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+header p {
+	color: #444;
+	line-height: 1.3;
+	padding: 0 5em;
+	font-size: 14px;
+}
+.password{
+	position: relative;
+	width: 100%;
+	box-shadow: 1px 10px 10px #0007;
+}
+.password input{
+	display: block;
+	width: 100%;
+	border:none;
+	outline: none;
+	padding: 1.8em 3em;
+	font-size: 1.1em;
+	background-color: #fff;
+}
+.password .before{
+	position: absolute;
+	width: 100%;
+	height: 9px;
+	background:  #59dff9;
+	display: block;
+}
+.customize{
+	margin-top: 1em;
+	padding: 1.5em 3em ;
+	background:#fff;
+	box-shadow: 1px 6px 10px #0007;
+}
+.customize h3{
+	padding: 0 0 .5em;
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 2em;
+}
+.length, .complexity,.complexity .type,.complexity .usedChars{
+	display: flex;
+	justify-content: space-between;
+}
+.length span, .length input{
+	width: 50%;
+	padding: 1em;
+	outline:  none;
+}
+.length input{
+	border:1px solid #e63946;
+}
+.complexity{
+	margin: 2em 0;
+	align-items: center
+}
+.complexity .type,.complexity .usedChars{
+flex-direction: column;
+width: 50%;
+position: relative;
+}
+.complexity .type div{
+	position: relative;
+}
+.complexity .type div .after{
+	content: "?";
+	position: absolute;
+	font-size: 10px;
+	background:red;
+	padding: .5em .8em;
+	border-radius: 50%;
+	background-color: #0003;
+	color: #fff;
+	top: 0;
+	left: calc(55%);
+	cursor: pointer;
+}
+.complexity .type div .after + span{
+	position: absolute;
+	background: #0008;
+	color: #fff;
+	width: 200px;
+	padding: 1em;
+	top: 0;
+	font-size: 13px;
+	left: 65%;
+	display: none;
+	z-index: 10;
+	border-radius: 10px;
+}
+.complexity .type div .after:hover + span{
+	display: block;
+}
+.complexity .type div,.complexity .usedChars div{
+margin-top: 1em; 
+}
+[type="checkbox"],[type="radio"]{
+	display: none;
+}
+label{
+	cursor: pointer;
+	display: block;
+	margin-top: .5em; 
+	position: relative;
+	padding-left: 2em;
+	width: fit-content;
+}
+label:after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 24px;
+	height: 24px;
+	border:2px solid #e63946;
+	background:#fff;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+[type="checkbox"]:checked +label:before,[type="radio"]:checked +label:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background:#e63946;
+	top: 7px;
+	left: 7px;
+	z-index: 2;
+	transition: all .6s ease;
+}
+[type="checkbox"]:not(:checked):not(:disabled):hover +label:before,[type="radio"]:not(:checked):not(:disabled):hover +label:before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background:#e6394650;
+	top: 7px;
+	left: 7px;
+	z-index: 2;
+}
+[type="radio"]:checked +label:before, [type="radio"] +label:after,[type="radio"]:not(:checked):hover +label:before{
+border-radius: 50%;
+}
+.btns{
+	display: flex;
+	justify-content: space-evenly;
+}
+.btns .btn{
+	padding: 1em 2em;
+	background: transparent;
+	color: #e63946;
+	font-weight: bolder;
+	border:2px solid #e63946;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	transition: all .6s ease;
+	user-select: none;
+	cursor: pointer;
+}
+.btns .btn:hover{
+	background-color: #e63946;
+	color: #fff;
+	border-color: #fff;
+}
+
+input[type="checkbox"]:disabled + label{
+	opacity: .5;
+}
+.modal{
+	position: absolute;
+	top: -50%;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+}
+.modal .msg{
+	background-color: #4283cd;
+	padding: 2em 7em;
+	color: #fff;
+	transition: all .6s ease;
+}
+.active{
+	top: 0;
+}
