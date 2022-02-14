@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="logo"></div>
+			<div class="info">
+				<a href="#">password generator tool</a>
+				<h1>generate inbreakable passwords</h1>
+				<p>use our online tool to generate inbreakable and randum passwords.</p>
+				<p>u can also save them.</p>
+			</div>
+		</header>
+		<section class="password">
+			<input type="text" >
+			<span class="before"></span>
+		</section>
+		<section class="customize">
+			<h3>customize your password</h3>
+			<div>
+				<div class="length">
+					<span>password length :</span>
+					<input type="number" max="40" min="1">
+				</div>
+				<div class="complexity">
+					<div class="type">
+						<div><input type="radio" id="simple" name="type">
+						<label for="simple">simple</label>
+						<div class="after">?</div>
+						<span>avoid numbers and special characters</span></div>
+						<div><input type="radio" id="complexe" name="type">
+						<label for="complexe">complexe</label>
+						<div class="after">?</div>
+					<span>avoid special characters</span></div>
+						<div><input type="radio" id="resistant"
+						name="type" checked>
+						<label for="resistant">hack-resistant</label>
+						<div class="after">?</div>
+						<span>contains all the characters like 1,!,M,n</span>
+					</div>
+					</div>
+					<div class="usedChars">
+						<div><input type="checkbox" checked id="charactersLower"  data-id="0">
+						<label for="charactersLower">lowercase</label></div>
+						<div><input type="checkbox" checked id="charactersUpper" data-id="1">
+						<label for="charactersUpper">uppercase</label></div>
+						<div><input type="checkbox" checked id="numbers"  data-id="2">
+						<label for="numbers">numbers</label></div>
+						<div><input type="checkbox" checked id="symbols"  data-id="3">
+						<label for="symbols">symbols</label></div>
+
+								</div>
+				</div>
+				<div class="btns"><div class="regen btn">
+					regenerate <span class="after"></span>
+				</div>
+				<div class="copy btn">
+					copy password <span class="after"></span>
+				</div></div>
+			</div>
+			<div class="modal">
+				<p class="msg">
+				</p>
+			</div>
+		</section>
+	</div>
+<script src="app.js" refer></script>
+</body>
+</html>
